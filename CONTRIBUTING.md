@@ -45,9 +45,9 @@ $ aqua-registry scaffold BurntSushi/ripgrep
 
 Check the log and fix the following configuration files as needed.
 
-* pkgs/BurntSushi/ripgrep/pkg.yaml
-* pkgs/BurntSushi/ripgrep/registry.yaml
-* aqua-test.yaml
+- pkgs/BurntSushi/ripgrep/pkg.yaml
+- pkgs/BurntSushi/ripgrep/registry.yaml
+- aqua-test.yaml
 
 Run `rg --help` for testing.
 

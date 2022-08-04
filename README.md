@@ -47,8 +47,8 @@ packages:
 
 About Global Configuration, please see the document.
 
-* https://aquaproj.github.io/docs/tutorial-basics/global-config
-* https://aquaproj.github.io/docs/tutorial-extras/team-config
+- https://aquaproj.github.io/docs/tutorial-basics/global-config
+- https://aquaproj.github.io/docs/tutorial-extras/team-config
 
 Checkout this repository and set the environment variable `AQUA_GLOBAL_CONFIG`.
 
