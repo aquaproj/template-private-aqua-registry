@@ -1,0 +1,36 @@
+---
+name: Generate registry.yaml
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/generate-registry.yaml
+      - aqua/generate-registry.yaml
+      - registry.yaml
+      - pkgs/**/registry.yaml
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/generate-registry.yaml
+      - aqua/generate-registry.yaml
+      - registry.yaml
+      - pkgs/**/registry.yaml
+jobs:
+  generate-registry:
+    runs-on: ubuntu-latest
+    env:
+      AQUA_CONFIG: aqua/generate-registry.yaml
+    steps:
+      - uses: actions/checkout@v3
+      - uses: aquaproj/aqua-installer@v1.0.0
+        with:
+          aqua_version: v1.19.0-3
+      - run: aqua-registry gr
+      - run: git add registry.yaml
+      - run: git --no-pager diff --cached
+      - run: |
+          if ! git diff --cached --exit-code; then
+            echo "Please run 'aqua-registry gr'" >&2
+            echo "::error file=registry.yaml,title=Please run 'go run ./cmd/generate-registry'::https://github.com/aquaproj/aqua-registry/blob/main/CONTRIBUTING.md#generate-registry"
+            exit 1
+          fi
