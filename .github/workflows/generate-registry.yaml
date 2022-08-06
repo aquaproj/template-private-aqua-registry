@@ -22,7 +22,7 @@ jobs:
       AQUA_CONFIG: aqua/generate-registry.yaml
     steps:
       - uses: actions/checkout@v3
-      - uses: aquaproj/aqua-installer@v1.1.0
+      - uses: aquaproj/aqua-installer@v1.1.1-0
         with:
           aqua_version: v1.19.0-3
       - run: aqua-registry gr
