@@ -6,7 +6,6 @@ https://github.com/aquaproj/template-private-aqua-registry
 
 Replace the following place holders.
 
-- `<REGISTRY_NAME>`
 - `<REPO_OWNER>`
 - `<REPO_NAME>`
 
