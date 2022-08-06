@@ -38,7 +38,7 @@ registries:
     type: github_content
     repo_owner: <REPO_OWNER>
     repo_name: <REPO_NAME>
-    ref: v0.1.0 # renovate: depName=<REPO_OWENR>/<REPO_NAME>
+    ref: v0.1.0 # renovate: depName=<REPO_OWNER>/<REPO_NAME>
     path: registry.yaml
 packages:
 ```
