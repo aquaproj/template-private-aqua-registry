@@ -3,6 +3,6 @@
 # https://aquaproj.github.io/
 registries:
   - type: standard
-    ref: v3.21.0 # renovate: depName=aquaproj/aqua-registry
+    ref: v3.22.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: aquaproj/registry-tool@v0.1.0-0
