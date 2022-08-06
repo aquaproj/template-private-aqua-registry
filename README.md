@@ -2,11 +2,7 @@
 
 Template Repository for Private aqua Registry
 
-[Set up](SETUP.md) | [Contributing](CONTRIBUTING.md)
-
-## :warning: Status of this repository
-
-Still in alpha. Don't use this yet.
+[Reference](https://aquaproj.github.io/docs/reference/create-private-registry) | [Contributing](CONTRIBUTING.md)
 
 ## What's aqua?
 

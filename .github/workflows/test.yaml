@@ -31,48 +31,15 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
-      - uses: aquaproj/aqua-installer@v1.1.1-0
+      - uses: aquaproj/aqua-installer@v1.1.1
         with:
-          aqua_version: v1.19.0-3
+          aqua_version: v1.18.0
 
-      - name: Run ci-info and update environment variables
-        # TODO Run the command without `aqua exec`.
-        # We don't know the cause, but `ci-info run | sed -E "s/^export //" >> "$GITHUB_ENV"` doesn't work on Windows.
-        # So we run ci-info via `aqua exec`.
-        run: aqua exec -- ci-info run | sed -E "s/^export //" >> "$GITHUB_ENV"
-
-      - name: Update aqua/test.yaml
-        run: |
-          if grep -E "target:" "$CI_INFO_TEMP_DIR/labels.txt" > /dev/null 2>&1; then
-            grep -E "target:" "$CI_INFO_TEMP_DIR/labels.txt" | sed "s|^target:\(.*\)|  - import: ../pkgs/\1/pkg.yaml|" >> aqua/test.yaml
-          fi
-          if grep -E "^pkgs/.*\.yaml" < "$CI_INFO_TEMP_DIR/pr_all_filenames.txt" > /dev/null 2>&1; then
-            grep -E "^pkgs/.*\.yaml" < "$CI_INFO_TEMP_DIR/pr_all_filenames.txt" | sed "s/registry\.yaml/pkg.yaml/" | sort -u | sed "s|^|  - import: ../|" >> aqua/test.yaml
-          fi
-          echo "[INFO] aqua/test.yaml" >&2
-          cat aqua/test.yaml >&2
-
-      - name: Check if go is required
-        id: go_required
-        run: |
-          if grep '\- import:' aqua/test.yaml | sed 's|  - import: \(.*\)/pkg.yaml|\1/registry.yaml|' | xargs cat | grep "type: go" > /dev/null 2>&1; then
-            echo "::set-output name=value::true"
-          else
-            echo "::set-output name=value::false"
-          fi
-
-      - name: Install Go
-        if: steps.go_required.outputs.value == 'true'
-        uses: actions/setup-go@v3
+      - uses: aquaproj/registry-action/test@v0.1.0
         with:
-          go-version: "1.18.4"
-
-      - name: Install packages for testing
-        run: aqua i --test
-        env:
-          AQUA_LOG_LEVEL: debug
-          AQUA_GOOS: ${{ matrix.env.goos }}
-          AQUA_GOARCH: ${{ matrix.env.goarch }}
+          goos: ${{ matrix.env.goos }}
+          goarch: ${{ matrix.env.goarch }}
+          go_version: "1.18.5"
 
   # This job is used for branch protection rule
   # Add this job to `Status checks that are required`
