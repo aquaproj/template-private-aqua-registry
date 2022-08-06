@@ -5,12 +5,7 @@ About how to write [registry.yaml](registry.yaml), please see [Registry Configur
 ## Requirements
 
 - [aqua](https://aquaproj.github.io/docs/reference/install)
-- [GitHub Personal Access Token](README.md)
-- (Optional) [GitHub CLI](https://cli.github.com/)
-
-GitHub CLI is required to create pull requests by `aqua-registry create-pr-new-pkg` command.
-`aqua-registry create-pr-new-pkg` is useful but you can also create pull requests without this.
-So GitHub CLI is optional.
+- [GitHub Personal Access Token](README.md#github-access-token-is-required)
 
 ## Set up
 

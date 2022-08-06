@@ -2,7 +2,7 @@
 
 Template Repository for Private aqua Registry
 
-[CONTRIBUTING](CONTRIBUTING.md) | [Set up](SETUP.md)
+[Set up](SETUP.md) | [Contributing](CONTRIBUTING.md)
 
 ## :warning: Status of this repository
 
