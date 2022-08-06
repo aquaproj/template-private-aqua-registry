@@ -57,6 +57,6 @@ $ git checkout https://github.com/<REPO_OWNER>/<REPO_NAME>
 $ export AQUA_GLOBAL_CONFIG=$PWD/<REPO_NAME>/aqua-all.yaml:$AQUA_GLOBAL_CONFIG
 ```
 
-## Contributing
+## LICENSE
 
-[CONTRIBUTING.md](CONTRIBUTING.md)
+[MIT](LICENSE)
