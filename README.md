@@ -34,7 +34,7 @@ aqua.yaml
 # aqua - Declarative CLI Version Manager
 # https://aquaproj.github.io/
 registries:
-  - name: <REGISTRY_NAME>
+  - name: custom # Rename freely
     type: github_content
     repo_owner: <REPO_OWNER>
     repo_name: <REPO_NAME>
