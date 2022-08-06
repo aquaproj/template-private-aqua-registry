@@ -12,7 +12,7 @@ About how to write [registry.yaml](registry.yaml), please see [Registry Configur
 Checkout the repository and install [aqua-registry CLI](https://github.com/aquaproj/registry-tool).
 
 ```console
-$ git checkout https://github.com/<REPO_OWENR>/<REPO_NAME>
+$ git checkout https://github.com/<REPO_OWNER>/<REPO_NAME>
 $ cd <REPO_NAME>
 $ aqua i -l # Install aqua-registry CLI
 ```
