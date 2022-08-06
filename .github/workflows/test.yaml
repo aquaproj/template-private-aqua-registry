@@ -73,3 +73,12 @@ jobs:
           AQUA_LOG_LEVEL: debug
           AQUA_GOOS: ${{ matrix.env.goos }}
           AQUA_GOARCH: ${{ matrix.env.goarch }}
+
+  # This job is used for branch protection rule
+  # Add this job to `Status checks that are required`
+  status-check:
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: failure()
+    steps:
+      - run: exit 1
