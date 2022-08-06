@@ -31,6 +31,6 @@ jobs:
       - run: |
           if ! git diff --cached --exit-code; then
             echo "Please run 'aqua-registry gr'" >&2
-            echo "::error file=registry.yaml,title=Please run 'go run ./cmd/generate-registry'::https://github.com/aquaproj/aqua-registry/blob/main/CONTRIBUTING.md#generate-registry"
+            echo "::error file=registry.yaml,title=Please run 'aqua-registry gr'::"
             exit 1
           fi
