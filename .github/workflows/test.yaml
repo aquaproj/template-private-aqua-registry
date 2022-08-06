@@ -28,9 +28,16 @@ jobs:
         shell: bash
     env:
       AQUA_CONFIG: aqua/test.yaml
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
+
+      # - name: Generate token
+      #   id: generate_token
+      #   uses: tibdex/github-app-token@v1
+      #   with:
+      #     app_id: ${{ secrets.APP_ID }}
+      #     private_key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - uses: aquaproj/aqua-installer@v1.1.1
         with:
           aqua_version: v1.18.0
@@ -40,6 +47,8 @@ jobs:
           goos: ${{ matrix.env.goos }}
           goarch: ${{ matrix.env.goarch }}
           go_version: "1.18.5"
+        # env:
+        #   GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
 
   # This job is used for branch protection rule
   # Add this job to `Status checks that are required`
