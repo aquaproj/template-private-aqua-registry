@@ -8,5 +8,6 @@ registries:
     type: local
     path: registry.yaml
 packages:
-  - name: aquaproj/registry-tool@v0.1.0-0
   - import: aqua-local.yaml
+  - name: aquaproj/registry-tool@v0.1.0-1
+  - name: rhysd/actionlint@v1.6.15
