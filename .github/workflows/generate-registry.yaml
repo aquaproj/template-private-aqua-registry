@@ -18,8 +18,6 @@ on:
 jobs:
   generate-registry:
     runs-on: ubuntu-latest
-    env:
-      AQUA_CONFIG: aqua/generate-registry.yaml
     steps:
       - uses: actions/checkout@v3
       - uses: aquaproj/aqua-installer@v1.1.1-0
