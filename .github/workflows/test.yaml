@@ -31,9 +31,9 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
-      - uses: aquaproj/aqua-installer@v1.1.1-0
+      - uses: aquaproj/aqua-installer@v1.1.1
         with:
-          aqua_version: v1.19.0-3
+          aqua_version: v1.18.0
 
       - name: Run ci-info and update environment variables
         # TODO Run the command without `aqua exec`.
