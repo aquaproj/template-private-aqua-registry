@@ -7,6 +7,7 @@ on:
     branches: [main]
 env:
   AQUA_LOG_COLOR: always
+  GITHUB_TOKEN: ${{ github.token }}
 jobs:
   ci-info:
     runs-on: ubuntu-latest
