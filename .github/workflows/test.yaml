@@ -18,7 +18,7 @@ jobs:
       - uses: aquaproj/aqua-installer@v2.0.2
         with:
           aqua_version: v1.34.2
-      - uses: suzuki-shunsuke/ci-info-action/store@v0.1.1
+      - uses: suzuki-shunsuke/ci-info-action/store@v0.1.2
       - run: echo "https://github.com/aquaproj/aqua-registry/pull/$CI_INFO_PR_NUMBER" >> "$GITHUB_STEP_SUMMARY"
 
   test:
@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: suzuki-shunsuke/ci-info-action/restore@v0.1.1
+      - uses: suzuki-shunsuke/ci-info-action/restore@v0.1.2
 
       # - name: Generate token
       #   id: generate_token
