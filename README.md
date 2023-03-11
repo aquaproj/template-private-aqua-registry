@@ -2,7 +2,7 @@
 
 Template Repository for Private aqua Registry
 
-[Reference](https://aquaproj.github.io/docs/reference/create-private-registry) | [Contributing](CONTRIBUTING.md)
+[Reference](https://aquaproj.github.io/docs/develop-registry/create-private-registry) | [Contributing](CONTRIBUTING.md)
 
 ## What's aqua?
 
@@ -43,8 +43,8 @@ packages:
 
 About Global Configuration, please see the document.
 
-- https://aquaproj.github.io/docs/tutorial-basics/global-config
-- https://aquaproj.github.io/docs/tutorial-extras/team-config
+- https://aquaproj.github.io/docs/tutorial/global-config
+- https://aquaproj.github.io/docs/guides/team-config
 
 Checkout this repository and set the environment variable `AQUA_GLOBAL_CONFIG`.
 
