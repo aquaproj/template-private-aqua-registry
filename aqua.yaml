@@ -12,5 +12,5 @@ packages:
   - import: aqua-local.yaml
   - name: aquaproj/registry-tool@v0.2.3
     registry: std
-  - name: rhysd/actionlint@v1.6.26
+  - name: rhysd/actionlint@v1.6.27
     registry: std
