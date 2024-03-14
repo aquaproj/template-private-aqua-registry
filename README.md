@@ -4,6 +4,12 @@ Template Repository for Private aqua Registry
 
 [Reference](https://aquaproj.github.io/docs/develop-registry/create-private-registry) | [Contributing](CONTRIBUTING.md)
 
+## :warning: Archive this repository
+
+[#465](https://github.com/aquaproj/template-private-aqua-registry/issues/465)
+
+We archived this repository because we can't maintain this repository continuously.
+
 ## What's aqua?
 
 aqua is a Declarative CLI Version Manager written in Go.
